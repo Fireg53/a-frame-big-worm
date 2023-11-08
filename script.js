@@ -10,7 +10,7 @@ AFRAME.registerGeometry('example', {
        const pointsArray = new Array();
        data.vertices.map(function (vertex) {
        var points = vertex.split(' ').map(function(x){return parseInt(x);});
-       pointsArray.push(new THREE.Vector3(points[0], points[1], points[2]));
+       pointsArray.push(new THREE.Sphere("1"));
        });
        geometry.setFromPoints(pointsArray);
        geometry.computeBoundingBox();
